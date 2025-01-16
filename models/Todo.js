@@ -1,18 +1,23 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose'); // Tool for working with MongoDB
 
+// Create a template for what every todo should look like
 const TodoSchema = new mongoose.Schema({
   todo: {
-    type: String,
-    required: true,
+    // The actual todo text
+    type: String, // Must be text
+    required: true, // Must be included
   },
   completed: {
-    type: Boolean,
-    required: true,
+    // Todo status
+    type: Boolean, // Must be true/false
+    required: true, // Must be included
   },
   userId: {
-    type: String,
-    required: true
-  }
-})
+    // Which user owns this todo
+    type: String, // User's ID as text
+    required: true, // Must be included
+  },
+});
 
-module.exports = mongoose.model('Todo', TodoSchema)
+// Export this model so other files can use it
+module.exports = mongoose.model('Todo', TodoSchema);

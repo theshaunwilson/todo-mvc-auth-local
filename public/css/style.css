@@ -1,10 +1,10 @@
-h1{
-    color: red;
+h1 {
+  color: red; // Makes all h1 titles red
 }
-.completed{
-    text-decoration: line-through;
-    color: gray;
+.completed {
+  text-decoration: line-through; // Adds line through completed todos
+  color: gray; // Makes completed todos gray
 }
-.not{
-    text-decoration: underline;
+.not {
+  text-decoration: underline; // Underlines incomplete todos
 }
